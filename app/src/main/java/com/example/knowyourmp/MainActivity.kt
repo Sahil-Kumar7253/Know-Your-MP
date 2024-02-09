@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.MediaController
 import android.widget.Toast
 import android.widget.VideoView
@@ -63,12 +64,17 @@ class MainActivity : AppCompatActivity() {
         }
 
         val proceed =  findViewById<Button>(R.id.proceed)
+        val user = findViewById<ImageView>(R.id.UserImage)
+
+        user.setOnClickListener {
+            intent = Intent(applicationContext,UserProfile::class.java)
+            startActivity(intent)
+        }
 
         proceed.setOnClickListener {
             intent = Intent(applicationContext, Maharshtra::class.java)
             startActivity(intent)
         }
-
         auth = FirebaseAuth.getInstance()
 
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -82,16 +88,16 @@ class MainActivity : AppCompatActivity() {
             signInGoogle()
         }
 
-        val email = intent.getStringExtra("email")
-        val displayName = intent.getStringExtra("name")
+//        val email = intent.getStringExtra("email")
+//        val displayName = intent.getStringExtra("name")
 
 
         findViewById<Button>(R.id.signout).setOnClickListener {
             auth.signOut()
-            startActivity(Intent(this , MainActivity::class.java))
-            Toast.makeText(this, "Signed Out90,                                                                                                                                                                                                                                                                              ", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this , LoginPage::class.java))
+            Toast.makeText(this, "Signed Out", Toast.LENGTH_SHORT).show()
         }
-        }
+    }
 
 
      private fun signInGoogle(){
