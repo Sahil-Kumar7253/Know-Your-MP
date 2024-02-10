@@ -54,6 +54,7 @@ It can play audio or video from media files stored in your application's resourc
 Application Link & Future Scope :
 
 You Can access the app through the given apk file :-
+https://drive.google.com/drive/u/2/folders/1VIvFT8BtLuAeHZUAz_9V-gaSUoPdFw9l
 
 
 The app can expand its coverage to include information about politicians at the local level, such as municipal councillors, panchayat members, and other grassroots representatives. Providing localized information can help users engage more actively in local governance and politics.It can provide comprehensive information about upcoming elections, including candidate profiles, election schedules, polling booth locations, and voter registration details. This can empower users to participate more actively in the electoral process.
